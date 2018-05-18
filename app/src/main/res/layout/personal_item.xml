@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mine_top"
+    android:background="@mipmap/personal_top_bg"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            >
+            <ImageView
+                android:id="@+id/avator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_head"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="45dp"
+            android:id="@+id/name_exp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/head"
+            android:layout_marginStart="20dp"
+            >
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/user_name"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    tools:text="user_name" />
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src=""/>-->
+                <!--TODO:设置性别图片-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/grade"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/bar"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/personal_grade_bg"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1_10"
+                    android:layout_marginStart="3dp" />
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/user_head_bg"
+                    android:padding="2dp"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    tools:text="LV.1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/followed_following"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/following"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/following_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="数量"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ing_ed_divider"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/followed"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followed"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/followed_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:textSize="14sp"
+                    tools:text="数量" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ListView</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">更多</string>
+    <string name="title_notifications">通知</string>
+    <string name="next_activity">Next Activity</string>
+    <string name="test">1235</string>
+    <string name="left">Left</string>
+    <string name="center">Center</string>
+    <string name="right">Right</string>
+
+    <style name="title_home">Home</style>
+
+    <string name="fragment_first">推  荐</string>
+    <string name="fragment_second">发  现</string>
+    <string name="fragment_three">主题世界</string>
+    <string name="fragment_four">书  库</string>
+    <string name="fragment_create">创  作</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1_10">1/10</string>
+    <string name="following">关注</string>
+    <string name="ing_ed_divider">|</string>
+    <string name="followed">粉丝</string>
+</resources>
