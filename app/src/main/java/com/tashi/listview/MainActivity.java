@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.tashi.listview.sampledata.mAdapter;
@@ -35,6 +36,14 @@ public class MainActivity extends Activity {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
+        adapter.setOnItemClickLister(new mAdapter.OnItemClickLister() {
+            @Override
+            public void onItemClick(View view, int position) {
+                intent = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         recyclerView.setAdapter(adapter);
 
 //        ItemTouchHelper.Callback callback = new ItemViewActionManager(adapter);

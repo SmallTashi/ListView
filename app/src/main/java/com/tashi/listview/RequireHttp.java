@@ -1,5 +1,8 @@
 package com.tashi.listview;
 
+import android.os.Handler;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+
 
 public class RequireHttp {
 
@@ -21,19 +25,22 @@ public class RequireHttp {
     private static final String All = "all";
 
     String url2="";
-    private static Runnable Text(final String Type, final int number, final int page) {
+    private static void Text(final String Type, final int Number, final int page,CallBack callBack) {
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 String data = "";
+                HttpURLConnection connection=null;
                 try {
-                    HttpURLConnection connection;
                     String url = "http://gank.io/api/data/";
-                    url = url + Type + "/" + number + "/" + page;
+                    url = url + Type + "/" + Number + "/" + page;
                     URL Url = new URL(url);
                     URLConnection urlConnection = Url.openConnection();
                     connection = (HttpURLConnection) urlConnection;
                     connection.setRequestMethod("GET");
+                    connection.setConnectTimeout(10*1000);
+                    connection.setReadTimeout(10*1000);
                     connection.connect();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     String line;
@@ -44,8 +51,23 @@ public class RequireHttp {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                if(connection!=null){
+                    connection.disconnect();
+                }
+
+                Handler handler = new Handler();
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+                });
             }
-        }.run();
+        }
         );
+    }
+    public interface CallBack{
+        void onSuccess();
+        void onFiled();
     }
 }

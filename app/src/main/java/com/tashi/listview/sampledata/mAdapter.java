@@ -3,6 +3,7 @@
  //TODO 多布局的Item的位置与数据的绑定在排序、删除操作后仍有BUG无法解决
 
 package com.tashi.listview.sampledata;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,20 +14,36 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tashi.listview.Main2Activity;
+import com.tashi.listview.MainActivity;
 import com.tashi.listview.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> implements ItemTouchHelperAdapter {
+ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> implements ItemTouchHelperAdapter {
     private ArrayList<Integer> image_normal;
     private ArrayList<Integer> image_first;
     private ArrayList<String> texts_normal;
     private ArrayList<String> texts_first;
     private ArrayList<Integer> image_third;
+    private OnItemClickLister onItemClickLister = null;
 
+     @Override
+     public void onBindViewHolder(@NonNull ViewHolderPool holder, int position, @NonNull List<Object> payloads) {
+         super.onBindViewHolder(holder, position, payloads);
+     }
 
-    public mAdapter(ArrayList<Integer> image_normal, ArrayList<String> texts_normal) {
+     public static interface OnItemClickLister{
+        void onItemClick(View view, int position);
+    }
+
+     public void setOnItemClickLister(OnItemClickLister onItemClickLister) {
+         this.onItemClickLister = onItemClickLister;
+     }
+
+     public mAdapter(ArrayList<Integer> image_normal, ArrayList<String> texts_normal) {
         this.image_normal = image_normal;
         this.image_first = new ArrayList<>();
         this.texts_normal = texts_normal;
@@ -49,6 +66,7 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> impl
 
     }
 
+
     @Override
     public int getItemViewType(int position) {
         return position % 5;
@@ -59,13 +77,17 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> impl
         View view;
         if (viewType == 0) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.first_item, parent, false);
+
         }else if(viewType==3){
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.third_item,parent,false);
         }
         else {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.normal_item, parent, false);
         }
-        return new ViewHolderPool(view, viewType);
+
+        ViewHolderPool vh = new ViewHolderPool(view,viewType);
+
+        return vh;
     }
     @Override
     public void onBindViewHolder(@NonNull ViewHolderPool holder, int position) {
@@ -149,9 +171,13 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> impl
 
         private ViewHolderPool(View itemView, int Type) {
             super(itemView);
+            itemView.setOnClickListener(this);
             if (Type == ITEM_FIRST) {
+
                 initFist(itemView);
+
             }else if(Type==3){
+
                 initThird(itemView);
             }
             else {
@@ -195,14 +221,8 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolderPool> impl
 
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
-                case (R.layout.first_item):
-                    //TODO 点击事件代码逻辑
-                    break;
-                case (R.layout.third_item):
-                    break;
-                case (R.layout.normal_item):
-                    break;
+            if(onItemClickLister != null){
+                onItemClickLister.onItemClick(itemView,getAdapterPosition());
             }
 
         }
