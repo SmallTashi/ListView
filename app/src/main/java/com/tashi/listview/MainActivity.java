@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     private ArrayList<Integer> image_first = null;
     private ArrayList<String> texts_first = null;
     RecyclerView recyclerView;
-    Intent intent ;
+    Intent intent;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -39,12 +39,12 @@ public class MainActivity extends Activity {
         adapter.setOnItemClickLister(new mAdapter.OnItemClickLister() {
             @Override
             public void onItemClick(View view, int position) {
-                intent = new Intent(MainActivity.this,Main2Activity.class);
+                intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
-                finish();
             }
         });
         recyclerView.setAdapter(adapter);
+
 
 //        ItemTouchHelper.Callback callback = new ItemViewActionManager(adapter);
 //        ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
@@ -61,7 +61,6 @@ public class MainActivity extends Activity {
 //        });
 
     }
-
 
 
     public void initAnswer() {
@@ -98,7 +97,6 @@ public class MainActivity extends Activity {
 
     public void initImageView() {
         this.images_normal = new ArrayList<>();
-
 
         images_normal.add(R.drawable.one);
         images_normal.add(R.drawable.two);

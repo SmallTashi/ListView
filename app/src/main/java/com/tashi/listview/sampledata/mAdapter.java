@@ -19,6 +19,7 @@ import com.tashi.listview.MainActivity;
 import com.tashi.listview.R;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
 
@@ -171,6 +172,7 @@ import java.util.List;
 
         private ViewHolderPool(View itemView, int Type) {
             super(itemView);
+
             itemView.setOnClickListener(this);
             if (Type == ITEM_FIRST) {
 

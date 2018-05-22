@@ -1,13 +1,15 @@
 package com.tashi.listview;
 
 import android.os.Handler;
-import android.widget.Toast;
+
+import com.tashi.listview.Data.JSONManager;
+
+import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -16,16 +18,20 @@ public class RequireHttp {
 
     String url1 = "http://gank.io/api/random/data/";
 
-    private static final String Android = "Android";
-    private static final String  Bonus = "福利";
-    private static final String  IOS = "ios";
-    private static final String  VideoForRest = "休息视频";
-    private static final String ExpandResource = "扩展资源";
-    private static final String FrontEnd = "前端";
-    private static final String All = "all";
+    /*
+    * 第一次加载个10个数据
+    * 刷新一次加载5个
+    * */
+    public static final String Android = "Android";
+    public static final String  Bonus = "福利";
+    public static final String  IOS = "ios";
+    public static final String  VideoForRest = "休息视频";
+    public static final String ExpandResource = "扩展资源";
+    public static final String FrontEnd = "前端";
+    public static final String All = "all";
 
     String url2="";
-    private static void Text(final String Type, final int Number, final int page,CallBack callBack) {
+    public static void Text(final String Type, final int Number, final int page,CallBack callBack) {
 
         new Thread(new Runnable() {
             @Override
@@ -47,8 +53,9 @@ public class RequireHttp {
                     while ((line = reader.readLine()) != null) {
                         data += (line);
                     }
+                    Analyze(data,Number);
                     reader.close();
-                } catch (IOException e) {
+                } catch (IOException | JSONException e) {
                     e.printStackTrace();
                 }
                 if(connection!=null){
@@ -65,6 +72,10 @@ public class RequireHttp {
             }
         }
         );
+    }
+    private static void Analyze(String JSON,int number) throws JSONException {
+        JSONManager.getGankData(JSON,number);
+
     }
     public interface CallBack{
         void onSuccess();

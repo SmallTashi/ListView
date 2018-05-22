@@ -1,16 +1,18 @@
 package com.tashi.listview.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Gank {
 
+
     /**
      * error : false
-     * results : [{"_id":"5a967b41421aa91071b838f7","createdAt":"2018-02-28T17:49:53.265Z","desc":"MusicLibrary-一个丰富的音频播放SDK","publishedAt":"2018-03-12T08:44:50.326Z","source":"web","type":"Android","url":"https://github.com/lizixian18/MusicLibrary","used":true,"who":"lizixian"},{"_id":"5a9cf1f5421aa9103fff20b1","createdAt":"2018-03-05T15:29:57.435Z","desc":"DirectSelect Dropdown is a selection widget with an ethereal, full-screen modal popup displaying the available choices when the widget is interact with.","images":["http://img.gank.io/90db2f35-2e9d-4d75-b5a9-53ee1719b57b"],"publishedAt":"2018-03-12T08:44:50.326Z","source":"web","type":"Android","url":"https://github.com/Ramotion/direct-select-android","used":true,"who":"Alex Mikhnev"},{"_id":"5a9f4968421aa910426a1890","createdAt":"2018-03-07T10:07:36.87Z","desc":"TextPathView是一个把文字转化为路径动画然后展现出来的自定义控件","images":["http://img.gank.io/bc3987dc-eb33-451f-a901-3e65bd7b666b"],"publishedAt":"2018-03-12T08:44:50.326Z","source":"chrome","type":"Android","url":"https://github.com/totond/TextPathView","used":true,"who":"Jason"},{"_id":"5aa24192421aa9103fff20c3","createdAt":"2018-03-09T16:10:58.75Z","desc":"VirtualXposed：不用 Root，不解锁 BootLoader 也不用刷机就使用 Xposed 模块的APP","publishedAt":"2018-03-12T08:44:50.326Z","source":"web","type":"Android","url":"https://github.com/android-hacker/VirtualXposed","used":true,"who":"weishu"},{"_id":"5a7c42c8421aa90d24a065d4","createdAt":"2018-02-08T20:30:00.798Z","desc":"一个动画效果的播放控件，播放，暂停，停止之间的动画切换","images":["http://img.gank.io/c1ee3231-648d-4449-a455-04a13731b2e1"],"publishedAt":"2018-02-22T08:24:35.209Z","source":"web","type":"Android","url":"https://github.com/SwiftyWang/AnimatePlayButton","used":true,"who":null},{"_id":"5a7c6094421aa90d21aa114a","createdAt":"2018-02-08T22:37:08.833Z","desc":"漂亮的本地多媒体选择器","publishedAt":"2018-02-22T08:24:35.209Z","source":"web","type":"Android","url":"https://github.com/TonnyL/Charles","used":true,"who":"黎赵太郎"},{"_id":"5a7cf9e7421aa90d21aa114b","createdAt":"2018-02-09T09:31:19.687Z","desc":"开源的 markdown 编辑器","images":["http://img.gank.io/760970ea-daae-4b98-9f87-deecdd3fe1f7","http://img.gank.io/ea49dc41-3435-4126-ab5b-d7b3357ab517"],"publishedAt":"2018-02-22T08:24:35.209Z","source":"chrome","type":"Android","url":"https://github.com/zeleven/mua","used":true,"who":"蒋朋"},{"_id":"5a81333c421aa90d264d0eba","createdAt":"2018-02-12T14:25:00.318Z","desc":"A slider widget with a popup bubble displaying the precise value selected.","images":["http://img.gank.io/fe3c723f-643d-4466-91d5-86d9ed4ca88e"],"publishedAt":"2018-02-22T08:24:35.209Z","source":"web","type":"Android","url":"https://github.com/Ramotion/fluid-slider-android","used":true,"who":"Alex Mikhnev"},{"_id":"5a685120421aa911548992ab","createdAt":"2018-01-24T17:25:52.341Z","desc":"Android 下的音乐可视化","images":["http://img.gank.io/e0d29181-282e-4465-9965-1da81e0557d9"],"publishedAt":"2018-01-29T07:53:57.676Z","source":"web","type":"Android","url":"https://github.com/nekocode/MusicVisualization","used":true,"who":"nekocode"},{"_id":"5a69608a421aa9115b9306a2","createdAt":"2018-01-25T12:43:54.642Z","desc":"插件化理解与实现 \u2014\u2014 加载 Activity「类加载篇」","images":["http://img.gank.io/a861c69f-02d2-46e8-b120-58ba4b3d97bf"],"publishedAt":"2018-01-29T07:53:57.676Z","source":"web","type":"Android","url":"https://fashare2015.github.io/2018/01/24/dynamic-load-learning-load-activity/","used":true,"who":"梁山boy"}]
+     * results : [{"_id":"5b0222d6421aa9204c10e68f","createdAt":"2018-05-21T21:41:10.632Z","desc":"一键搭建 ArmsComponent 快速组件化方案的整体组件架构, 一秒开始组件化项目, 体验纯傻瓜式的组件化开发","images":["http://img.gank.io/b91a3412-7132-4d48-a309-d9cde94e7370","http://img.gank.io/92e254a5-f7e8-4401-ad40-a99ecb39064f","http://img.gank.io/2b1f25ba-88fa-46c7-87c3-d560bf9ba424","http://img.gank.io/a6b33cac-5698-4b2b-943a-e70c0c3f7394"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/JessYanCoding/ArmsComponent-Template","used":true,"who":"jess"},{"_id":"5b023aee421aa92050533d40","createdAt":"2018-05-21T11:20:14.726Z","desc":"Android上一个优雅、万能自定义UI、支持周视图、自定义周起始、性能高效的日历控件，支持热插拔实现的UI定制！支持标记、自定义颜色、农历、自定义月视图各种显示模式等。","images":["http://img.gank.io/51201b60-357c-4419-83d7-407dd25e7e53","http://img.gank.io/7cf43de1-9582-4370-b076-6a57c36d0368","http://img.gank.io/bc359e2d-1c80-4058-ba7d-bfd892f2c43d","http://img.gank.io/e9af417c-a7ca-4fea-a884-9cb27ae0e6a2","http://img.gank.io/4dbc4002-57a6-4f37-972a-5afa95e8b5bb","http://img.gank.io/e52520bd-8e74-4fd6-934d-7fceca80a628"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/huanghaibin-dev/CalendarView/tree/master","used":true,"who":"nan403"},{"_id":"5b02650f421aa9204ec6bc9e","createdAt":"2018-05-21T14:19:59.521Z","desc":"纵享丝滑滑动切换的周月日历，水滴效果，丰富自定义日历样式，仿小米日历（ViewDragHelper实现），PS 链接应该去掉README，因为我2月份投稿过重复","images":["http://img.gank.io/449e2c40-0d13-4f3b-83d6-c4896cddabfe","http://img.gank.io/d1d5ce5e-eef6-422d-b2a1-f108563c6bac","http://img.gank.io/c5292aef-d377-4f9c-95bb-3493d6981043","http://img.gank.io/64461132-1d1b-4893-9bf8-5fd74935a147"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/idic779/monthweekmaterialcalendarview/blob/master/README.md","used":true,"who":"idic779"},{"_id":"5b027c6b421aa92052025321","createdAt":"2018-05-21T15:59:39.843Z","desc":"Android 异步任务/异步通信,可以看作Rxjava和EventBus混合体,非常轻量","images":["http://img.gank.io/237a9c1a-8900-4bcb-af4e-f9dbcba0d2de","http://img.gank.io/9baf279b-4d40-4289-8850-f186d7f53b7a","http://img.gank.io/625d926a-db3f-4192-af26-60906e4e4a17","http://img.gank.io/bb71ef87-3847-4033-9e7d-ad3256ff3278"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/threekilogram/ObjectBus","used":true,"who":"刘金"},{"_id":"5b027cf9421aa92052025322","createdAt":"2018-05-21T16:02:01.339Z","desc":"复杂布局的新实现,通过view位置相关性实现布局,带Adapter的ConstraintLayout","images":["http://img.gank.io/c2eeefcc-7bfd-4840-ba4e-43bcfc42feb8","http://img.gank.io/8538885c-f860-4d10-a331-61767227ab0d","http://img.gank.io/63b1bdf9-5ea5-4b3f-b363-f3e22a5c928c","http://img.gank.io/ce7a35ba-52fb-486d-993b-bb7015f28b2b"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/threekilogram/Constraint","used":true,"who":"刘金"},{"_id":"5b0296f0421aa92050533d42","createdAt":"2018-05-21T17:52:48.656Z","desc":"基于IjkPlayer的视频播放器，支持一行代码切换MediaPlayer和ExoPlayer","images":["http://img.gank.io/e290eb59-e77f-44b0-8860-44a6cc254705","http://img.gank.io/b7aa7f1c-2b61-4dd5-950a-c3dbc4a40aed","http://img.gank.io/5ac5d348-41d9-44c3-a831-7755d3fee7f6","http://img.gank.io/84d7d016-2e80-421e-b856-a905eb2a4736","http://img.gank.io/ab1f2e2c-956d-4ee6-b726-562b4aaff03e","http://img.gank.io/f332415b-31e8-4b4e-a789-c32df12eb24e"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://github.com/dueeeke/dkplayer","used":true,"who":"DevlinChiu"},{"_id":"5b02a6f7421aa97aa11c234b","createdAt":"2018-05-21T19:01:11.890Z","desc":"Android 之 Jar 包偷天换日","publishedAt":"2018-05-22T10:30:57.698Z","source":"web","type":"Android","url":"https://juejin.im/post/5addf731f265da0b83365df3#","used":true,"who":"nekocode"},{"_id":"5b02ad78421aa97a9d95b8fd","createdAt":"2018-05-21T19:28:56.458Z","desc":"Android自定义控件仿黑客帝国数字雨","images":["http://img.gank.io/4d8a3ce3-8a1c-4238-ba83-0f0327d6f41e"],"publishedAt":"2018-05-22T10:30:57.698Z","source":"chrome","type":"Android","url":"https://github.com/skateboard1991/NumberRain","used":true,"who":"lijinshanmx"},{"_id":"5a960ee1421aa9107007b7a0","createdAt":"2018-05-21T00:16:33.99Z","desc":"安卓信使","publishedAt":"2018-05-21T01:11:33.975Z","source":"chrome","type":"Android","url":"https://github.com/signalapp/Signal-Android","used":true,"who":"蒋朋"},{"_id":"5af00508421aa90ff53134f4","createdAt":"2018-05-07T15:49:28.259Z","desc":"MVPArms 官方快速组件化方案","images":["http://img.gank.io/102d7944-709d-4a58-8ebd-58a9b110a478"],"publishedAt":"2018-05-21T01:11:33.975Z","source":"web","type":"Android","url":"https://github.com/JessYanCoding/ArmsComponent","used":true,"who":"jess"}]
      */
 
     private boolean error;
-    private List<ResultsBean> results;
+    private ArrayList<ResultsBean> results;
 
     public boolean isError() {
         return error;
@@ -20,26 +22,26 @@ public class Gank {
         this.error = error;
     }
 
-    public List<ResultsBean> getResults() {
+    public ArrayList<ResultsBean> getResults() {
         return results;
     }
 
-    public void setResults(List<ResultsBean> results) {
+    public void setResults(ArrayList<ResultsBean> results) {
         this.results = results;
     }
 
     public static class ResultsBean {
         /**
-         * _id : 5a967b41421aa91071b838f7
-         * createdAt : 2018-02-28T17:49:53.265Z
-         * desc : MusicLibrary-一个丰富的音频播放SDK
-         * publishedAt : 2018-03-12T08:44:50.326Z
+         * _id : 5b0222d6421aa9204c10e68f
+         * createdAt : 2018-05-21T21:41:10.632Z
+         * desc : 一键搭建 ArmsComponent 快速组件化方案的整体组件架构, 一秒开始组件化项目, 体验纯傻瓜式的组件化开发
+         * images : ["http://img.gank.io/b91a3412-7132-4d48-a309-d9cde94e7370","http://img.gank.io/92e254a5-f7e8-4401-ad40-a99ecb39064f","http://img.gank.io/2b1f25ba-88fa-46c7-87c3-d560bf9ba424","http://img.gank.io/a6b33cac-5698-4b2b-943a-e70c0c3f7394"]
+         * publishedAt : 2018-05-22T10:30:57.698Z
          * source : web
          * type : Android
-         * url : https://github.com/lizixian18/MusicLibrary
+         * url : https://github.com/JessYanCoding/ArmsComponent-Template
          * used : true
-         * who : lizixian
-         * images : ["http://img.gank.io/90db2f35-2e9d-4d75-b5a9-53ee1719b57b"]
+         * who : jess
          */
 
         private String _id;
@@ -51,7 +53,6 @@ public class Gank {
         private String url;
         private boolean used;
         private String who;
-        private List<String> images;
 
         public String get_id() {
             return _id;
@@ -74,7 +75,15 @@ public class Gank {
         }
 
         public void setDesc(String desc) {
-            this.desc = desc;
+                String str = "";
+                for(int i=0;i<desc.length();i+=4){
+                    String s = "";
+                    for(int j=i;j<i+4;j++){
+                        s+=String.valueOf(desc.charAt(j));
+                    }
+                    str+=String.valueOf((char)Integer.valueOf(s, 16).intValue());
+                }
+            this.desc = str;
         }
 
         public String getPublishedAt() {
@@ -125,12 +134,5 @@ public class Gank {
             this.who = who;
         }
 
-        public List<String> getImages() {
-            return images;
-        }
-
-        public void setImages(List<String> images) {
-            this.images = images;
-        }
     }
 }
